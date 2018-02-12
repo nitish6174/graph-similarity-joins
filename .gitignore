@@ -1,2 +1,7 @@
+# Python cache
+__pycache__/
+*.pyc
+# Virtual environment
 venv_py3/
+# Graph data
 data/
