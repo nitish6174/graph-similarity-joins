@@ -5,3 +5,4 @@ __pycache__/
 venv_py3/
 # Graph data
 data/
+data_old/
