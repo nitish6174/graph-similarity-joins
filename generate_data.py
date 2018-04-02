@@ -40,8 +40,8 @@ def make_random_graphs(v_count, d):
         data = []
         for i in range(n_graphs):
             # Number of vertices to generate
-            v_set_len = random.randint( int(min_v_fraction*v_count), v_count)
-            # Generate random set of vertex labels of len v_set_len
+            v_set_len = random.randint(int(min_v_fraction*v_count), v_count)
+            # Generate random set of vertex labels of size v_set_len
             random.shuffle(v_labels)
             v_set = v_labels[:v_set_len]
             v_set.sort()
@@ -84,15 +84,12 @@ def num_edges(num_v, density="normal"):
     b = ((2*math.sqrt(a) + math.sqrt(d))/3)**2
     c = ((math.sqrt(a) + 2*math.sqrt(d))/3)**2
     if density == "sparse":
-        l_mark = int(a)
-        u_mark = int(b)
+        l_mark, u_mark = a, b
     elif density == "dense":
-        l_mark = int(c)
-        u_mark = int(d)
+        l_mark, u_mark = c, d
     else:
-        l_mark = int(b)
-        u_mark = int(c)
-    return random.randint(l_mark, u_mark)
+        l_mark, u_mark = b, c
+    return random.randint(int(l_mark), int(u_mark))
 
 
 def make_connected_graph(v_count, v_set, n_edges):
@@ -115,10 +112,10 @@ def make_connected_graph(v_count, v_set, n_edges):
     v_unadded.remove(v_to_add)
     # Repeatedly connect a non-added vertex to any of the added ones
     while len(v_unadded) > 0:
+        v_to_connect = random.sample(v_added, 1)[0]
         v_to_add = random.sample(v_unadded, 1)[0]
         v_added.add(v_to_add)
         v_unadded.remove(v_to_add)
-        v_to_connect = random.sample(v_added, 1)[0]
         u = node_to_e_matrix_index[v_to_add]
         v = node_to_e_matrix_index[v_to_connect]
         e_matrix[u][v], e_matrix[v][u] = 1, 1
@@ -130,12 +127,12 @@ def make_connected_graph(v_count, v_set, n_edges):
             if e_matrix[i][j] == 0:
                 e_unadded.append((i, j))
             else:
-                e_list.append((i, j))
+                e_list.append((v_set[i], v_set[j]))
     random.shuffle(e_unadded)
     for i in range(n_edges):
         u, v = e_unadded[i][0], e_unadded[i][1]
         e_matrix[u][v], e_matrix[v][u] = 1, 1
-        e_list.append((u, v))
+        e_list.append((v_set[u], v_set[v]))
     e_list.sort()
     return e_matrix, e_list
 
