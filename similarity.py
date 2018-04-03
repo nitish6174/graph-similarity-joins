@@ -1,19 +1,18 @@
 import json
 from algo_veo import vertex_edge_overlap
+from algo_vs import vertex_edge_vector_similarity
 
 # Constants
 data_folder = "data/"
 
 # Vertex counts for which graph data is generated
 v_counts = [10, 100]
-v_counts = [10]
 
 # Density modes for which graphs are generated
 graph_densities = ["sparse", "normal", "dense"]
-# graph_densities = ["sparse"]
 
 # Similarity threshold above which pairs are to be found
-sim_threshold = 0.98
+sim_threshold = 0.9
 
 
 def main():
@@ -31,10 +30,14 @@ def pairwise_similarity(set1, set2):
     for i in range(len(set1)):
         for j in range(len(set2)):
             sim_veo = vertex_edge_overlap(set1[i], set2[j])
+            sim_vs = vertex_edge_vector_similarity(set1[i], set2[j])
             s = "A" + str(i+1) + " and B" + str(j+1) + " :"
             if sim_veo > sim_threshold:
                 print("\n" + s)
                 print("  Vertex Edge Overlap : " + str(sim_veo))
+                print("  Vector Similarity   : " + str(sim_vs))
+                # print(set1[i]["e_list"])
+                # print(set2[j]["e_list"])
 
 
 def load_data(v_count, d, set_label):
