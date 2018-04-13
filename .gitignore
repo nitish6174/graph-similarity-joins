@@ -3,6 +3,7 @@ __pycache__/
 *.pyc
 # Virtual environment
 venv_py3/
-# Graph data
+# Data folders
 data/
 data_old/
+results/
