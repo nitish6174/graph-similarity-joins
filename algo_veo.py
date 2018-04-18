@@ -1,4 +1,4 @@
-def vertex_edge_overlap(g1, g2):
+def vertex_edge_overlap(g1, g2, g_type):
     num1 = vertex_intersection_len(g1, g2)
     num2 = edge_intersection_len(g1, g2)
     den1 = len(g1["vertices"]) + len(g2["vertices"])
@@ -24,6 +24,7 @@ def edge_intersection_len(g1, g2):
     for e in e_list:
         v1 = v_index[e[0]]
         v2 = v_index[e[1]]
-        if v1 >= 0 and v2 >= 0:
-            count += e_matrix[v1][v2]
+        w = e[2]
+        if v1 >= 0 and v2 >= 0 and e_matrix[v1][v2] == w:
+            count += 1
     return count
