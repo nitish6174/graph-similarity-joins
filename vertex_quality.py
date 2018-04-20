@@ -2,7 +2,7 @@ from math import sqrt
 import numpy as np
 
 
-def compute_vertex_quality(g, g_type, method="pagerank"):
+def compute_vertex_quality(g, g_type, method="pagerank_degree_hybrid"):
     if method == "in_degree":
         return vertex_degree(g, g_type, "in")
     if method == "out_degree":
@@ -13,13 +13,13 @@ def compute_vertex_quality(g, g_type, method="pagerank"):
         return vertex_degree_normalised(g, g_type)
     if method == "pagerank":
         return pagerank(g, g_type)
+    if method == "pagerank_degree_hybrid":
+        return pagerank_degree_hybrid(g, g_type)
 
 
 def vertex_degree(g, g_type, degree_type="total"):
     # Initialize degree of all vertices as 0
-    q = {}
-    for v in g["vertices"]:
-        q[v] = 0
+    q = {v:0 for v in g["vertices"]}
     # Increment degree of edge endpoints accordingly
     for e in g["e_list"]:
         if g_type == "undirected" or degree_type == "total":
@@ -36,7 +36,7 @@ def vertex_degree_normalised(g, g_type, degree_type="total"):
     # Get degree of all vertices
     q = vertex_degree(g, g_type, degree_type)
     # Normalise the degree
-    norm = sqrt(sum([ q[k]**2 for k in q]))
+    norm = sqrt(sum([q[k]**2 for k in q]))
     for k in q:
         q[k] /= norm
     return q
@@ -71,6 +71,21 @@ def pagerank(g, g_type):
     for i in range(n):
         v = g["vertices"][i]
         q[v] = r4[i][0]
+    return q
+
+
+def pagerank_degree_hybrid(g, g_type):
+    # Get normalised total degree
+    q = vertex_degree_normalised(g, g_type, "total")
+    # Get pagerank quality
+    p = pagerank(g, g_type)
+    # Add pagerank score to normalised degree
+    for k in q:
+        if k in p:
+            q[k] += p[k]
+    # Divide by quality sum of all vertices to normalize
+    s = sum([q[k] for k in q])
+    q = {k: (v/s) for (k, v) in q.items()}
     return q
 
 

@@ -5,7 +5,7 @@ Generating graph data for:
   max edge weight  : 1
 Generating data/10_sparse_undirected_1_A.json . . . Done!
 Generating data/10_sparse_undirected_1_B.json . . . Done!
-Time taken : 0.7143585681915283
+Time taken : 0.8686320781707764
 ---------- 
 
 Generating graph data for:
@@ -15,7 +15,7 @@ Generating graph data for:
   max edge weight  : 5
 Generating data/10_sparse_undirected_5_A.json . . . Done!
 Generating data/10_sparse_undirected_5_B.json . . . Done!
-Time taken : 0.9208123683929443
+Time taken : 1.0055255889892578
 ---------- 
 
 Generating graph data for:
@@ -25,7 +25,7 @@ Generating graph data for:
   max edge weight  : 10
 Generating data/10_sparse_undirected_10_A.json . . . Done!
 Generating data/10_sparse_undirected_10_B.json . . . Done!
-Time taken : 0.9699161052703857
+Time taken : 1.106485366821289
 ---------- 
 
 Generating graph data for:
@@ -35,7 +35,7 @@ Generating graph data for:
   max edge weight  : 1
 Generating data/10_sparse_directed_1_A.json . . . Done!
 Generating data/10_sparse_directed_1_B.json . . . Done!
-Time taken : 0.5111353397369385
+Time taken : 0.5497562885284424
 ---------- 
 
 Generating graph data for:
@@ -45,7 +45,7 @@ Generating graph data for:
   max edge weight  : 5
 Generating data/10_sparse_directed_5_A.json . . . Done!
 Generating data/10_sparse_directed_5_B.json . . . Done!
-Time taken : 0.5839972496032715
+Time taken : 0.6588714122772217
 ---------- 
 
 Generating graph data for:
@@ -55,7 +55,7 @@ Generating graph data for:
   max edge weight  : 10
 Generating data/10_sparse_directed_10_A.json . . . Done!
 Generating data/10_sparse_directed_10_B.json . . . Done!
-Time taken : 0.593193769454956
+Time taken : 0.611736536026001
 ---------- 
 
 Generating graph data for:
@@ -65,7 +65,7 @@ Generating graph data for:
   max edge weight  : 1
 Generating data/10_normal_undirected_1_A.json . . . Done!
 Generating data/10_normal_undirected_1_B.json . . . Done!
-Time taken : 0.40910863876342773
+Time taken : 0.43541550636291504
 ---------- 
 
 Generating graph data for:
@@ -75,7 +75,7 @@ Generating graph data for:
   max edge weight  : 5
 Generating data/10_normal_undirected_5_A.json . . . Done!
 Generating data/10_normal_undirected_5_B.json . . . Done!
-Time taken : 0.47069811820983887
+Time taken : 0.47512269020080566
 ---------- 
 
 Generating graph data for:
@@ -85,7 +85,7 @@ Generating graph data for:
   max edge weight  : 10
 Generating data/10_normal_undirected_10_A.json . . . Done!
 Generating data/10_normal_undirected_10_B.json . . . Done!
-Time taken : 0.4764890670776367
+Time taken : 0.5035245418548584
 ---------- 
 
 Generating graph data for:
@@ -95,7 +95,7 @@ Generating graph data for:
   max edge weight  : 1
 Generating data/10_normal_directed_1_A.json . . . Done!
 Generating data/10_normal_directed_1_B.json . . . Done!
-Time taken : 0.35280275344848633
+Time taken : 0.3640923500061035
 ---------- 
 
 Generating graph data for:
@@ -105,7 +105,7 @@ Generating graph data for:
   max edge weight  : 5
 Generating data/10_normal_directed_5_A.json . . . Done!
 Generating data/10_normal_directed_5_B.json . . . Done!
-Time taken : 0.3927757740020752
+Time taken : 0.4023714065551758
 ---------- 
 
 Generating graph data for:
@@ -115,7 +115,7 @@ Generating graph data for:
   max edge weight  : 10
 Generating data/10_normal_directed_10_A.json . . . Done!
 Generating data/10_normal_directed_10_B.json . . . Done!
-Time taken : 0.3955574035644531
+Time taken : 0.40058279037475586
 ---------- 
 
 Generating graph data for:
@@ -125,7 +125,7 @@ Generating graph data for:
   max edge weight  : 1
 Generating data/10_dense_undirected_1_A.json . . . Done!
 Generating data/10_dense_undirected_1_B.json . . . Done!
-Time taken : 0.2840101718902588
+Time taken : 0.30385899543762207
 ---------- 
 
 Generating graph data for:
@@ -135,7 +135,7 @@ Generating graph data for:
   max edge weight  : 5
 Generating data/10_dense_undirected_5_A.json . . . Done!
 Generating data/10_dense_undirected_5_B.json . . . Done!
-Time taken : 0.33323240280151367
+Time taken : 0.3235199451446533
 ---------- 
 
 Generating graph data for:
@@ -145,7 +145,7 @@ Generating graph data for:
   max edge weight  : 10
 Generating data/10_dense_undirected_10_A.json . . . Done!
 Generating data/10_dense_undirected_10_B.json . . . Done!
-Time taken : 0.33375024795532227
+Time taken : 0.3456399440765381
 ---------- 
 
 Generating graph data for:
@@ -155,7 +155,7 @@ Generating graph data for:
   max edge weight  : 1
 Generating data/10_dense_directed_1_A.json . . . Done!
 Generating data/10_dense_directed_1_B.json . . . Done!
-Time taken : 0.28549838066101074
+Time taken : 0.3268744945526123
 ---------- 
 
 Generating graph data for:
@@ -165,7 +165,7 @@ Generating graph data for:
   max edge weight  : 5
 Generating data/10_dense_directed_5_A.json . . . Done!
 Generating data/10_dense_directed_5_B.json . . . Done!
-Time taken : 0.32511401176452637
+Time taken : 0.35337138175964355
 ---------- 
 
 Generating graph data for:
@@ -175,7 +175,7 @@ Generating graph data for:
   max edge weight  : 10
 Generating data/10_dense_directed_10_A.json . . . Done!
 Generating data/10_dense_directed_10_B.json . . . Done!
-Time taken : 0.33542418479919434
+Time taken : 0.3454270362854004
 ---------- 
 
 Generating graph data for:
@@ -185,7 +185,7 @@ Generating graph data for:
   max edge weight  : 1
 Generating data/25_sparse_undirected_1_A.json . . . Done!
 Generating data/25_sparse_undirected_1_B.json . . . Done!
-Time taken : 1.1842691898345947
+Time taken : 1.3068666458129883
 ---------- 
 
 Generating graph data for:
@@ -195,7 +195,7 @@ Generating graph data for:
   max edge weight  : 5
 Generating data/25_sparse_undirected_5_A.json . . . Done!
 Generating data/25_sparse_undirected_5_B.json . . . Done!
-Time taken : 1.3336999416351318
+Time taken : 1.4446218013763428
 ---------- 
 
 Generating graph data for:
@@ -205,7 +205,7 @@ Generating graph data for:
   max edge weight  : 10
 Generating data/25_sparse_undirected_10_A.json . . . Done!
 Generating data/25_sparse_undirected_10_B.json . . . Done!
-Time taken : 1.3252315521240234
+Time taken : 1.5211222171783447
 ---------- 
 
 Generating graph data for:
@@ -215,7 +215,7 @@ Generating graph data for:
   max edge weight  : 1
 Generating data/25_sparse_directed_1_A.json . . . Done!
 Generating data/25_sparse_directed_1_B.json . . . Done!
-Time taken : 0.9697463512420654
+Time taken : 1.0848276615142822
 ---------- 
 
 Generating graph data for:
@@ -225,7 +225,7 @@ Generating graph data for:
   max edge weight  : 5
 Generating data/25_sparse_directed_5_A.json . . . Done!
 Generating data/25_sparse_directed_5_B.json . . . Done!
-Time taken : 1.0079560279846191
+Time taken : 1.105626106262207
 ---------- 
 
 Generating graph data for:
@@ -235,7 +235,7 @@ Generating graph data for:
   max edge weight  : 10
 Generating data/25_sparse_directed_10_A.json . . . Done!
 Generating data/25_sparse_directed_10_B.json . . . Done!
-Time taken : 1.0209686756134033
+Time taken : 1.0842959880828857
 ---------- 
 
 Generating graph data for:
@@ -245,7 +245,7 @@ Generating graph data for:
   max edge weight  : 1
 Generating data/25_normal_undirected_1_A.json . . . Done!
 Generating data/25_normal_undirected_1_B.json . . . Done!
-Time taken : 0.6301069259643555
+Time taken : 0.6862890720367432
 ---------- 
 
 Generating graph data for:
@@ -255,7 +255,7 @@ Generating graph data for:
   max edge weight  : 5
 Generating data/25_normal_undirected_5_A.json . . . Done!
 Generating data/25_normal_undirected_5_B.json . . . Done!
-Time taken : 0.6779041290283203
+Time taken : 0.8067474365234375
 ---------- 
 
 Generating graph data for:
@@ -265,7 +265,7 @@ Generating graph data for:
   max edge weight  : 10
 Generating data/25_normal_undirected_10_A.json . . . Done!
 Generating data/25_normal_undirected_10_B.json . . . Done!
-Time taken : 0.706937313079834
+Time taken : 0.7218611240386963
 ---------- 
 
 Generating graph data for:
@@ -275,7 +275,7 @@ Generating graph data for:
   max edge weight  : 1
 Generating data/25_normal_directed_1_A.json . . . Done!
 Generating data/25_normal_directed_1_B.json . . . Done!
-Time taken : 0.8474595546722412
+Time taken : 0.963374137878418
 ---------- 
 
 Generating graph data for:
@@ -285,7 +285,7 @@ Generating graph data for:
   max edge weight  : 5
 Generating data/25_normal_directed_5_A.json . . . Done!
 Generating data/25_normal_directed_5_B.json . . . Done!
-Time taken : 0.8370907306671143
+Time taken : 1.0282492637634277
 ---------- 
 
 Generating graph data for:
@@ -295,7 +295,7 @@ Generating graph data for:
   max edge weight  : 10
 Generating data/25_normal_directed_10_A.json . . . Done!
 Generating data/25_normal_directed_10_B.json . . . Done!
-Time taken : 0.8613877296447754
+Time taken : 1.2295968532562256
 ---------- 
 
 Generating graph data for:
@@ -305,7 +305,7 @@ Generating graph data for:
   max edge weight  : 1
 Generating data/25_dense_undirected_1_A.json . . . Done!
 Generating data/25_dense_undirected_1_B.json . . . Done!
-Time taken : 0.6195251941680908
+Time taken : 0.6696133613586426
 ---------- 
 
 Generating graph data for:
@@ -315,7 +315,7 @@ Generating graph data for:
   max edge weight  : 5
 Generating data/25_dense_undirected_5_A.json . . . Done!
 Generating data/25_dense_undirected_5_B.json . . . Done!
-Time taken : 0.6326019763946533
+Time taken : 0.651376485824585
 ---------- 
 
 Generating graph data for:
@@ -325,7 +325,7 @@ Generating graph data for:
   max edge weight  : 10
 Generating data/25_dense_undirected_10_A.json . . . Done!
 Generating data/25_dense_undirected_10_B.json . . . Done!
-Time taken : 0.6432182788848877
+Time taken : 0.6533241271972656
 ---------- 
 
 Generating graph data for:
@@ -335,7 +335,7 @@ Generating graph data for:
   max edge weight  : 1
 Generating data/25_dense_directed_1_A.json . . . Done!
 Generating data/25_dense_directed_1_B.json . . . Done!
-Time taken : 0.846304178237915
+Time taken : 0.9765298366546631
 ---------- 
 
 Generating graph data for:
@@ -345,7 +345,7 @@ Generating graph data for:
   max edge weight  : 5
 Generating data/25_dense_directed_5_A.json . . . Done!
 Generating data/25_dense_directed_5_B.json . . . Done!
-Time taken : 0.879234790802002
+Time taken : 0.9342634677886963
 ---------- 
 
 Generating graph data for:
@@ -355,7 +355,7 @@ Generating graph data for:
   max edge weight  : 10
 Generating data/25_dense_directed_10_A.json . . . Done!
 Generating data/25_dense_directed_10_B.json . . . Done!
-Time taken : 0.8987562656402588
+Time taken : 0.9940488338470459
 ---------- 
 
 Generating graph data for:
@@ -365,7 +365,7 @@ Generating graph data for:
   max edge weight  : 1
 Generating data/50_sparse_undirected_1_A.json . . . Done!
 Generating data/50_sparse_undirected_1_B.json . . . Done!
-Time taken : 1.8752994537353516
+Time taken : 2.806863307952881
 ---------- 
 
 Generating graph data for:
@@ -375,7 +375,7 @@ Generating graph data for:
   max edge weight  : 5
 Generating data/50_sparse_undirected_5_A.json . . . Done!
 Generating data/50_sparse_undirected_5_B.json . . . Done!
-Time taken : 2.1982154846191406
+Time taken : 2.1488425731658936
 ---------- 
 
 Generating graph data for:
@@ -385,7 +385,7 @@ Generating graph data for:
   max edge weight  : 10
 Generating data/50_sparse_undirected_10_A.json . . . Done!
 Generating data/50_sparse_undirected_10_B.json . . . Done!
-Time taken : 2.189464807510376
+Time taken : 2.4983906745910645
 ---------- 
 
 Generating graph data for:
@@ -395,7 +395,7 @@ Generating graph data for:
   max edge weight  : 1
 Generating data/50_sparse_directed_1_A.json . . . Done!
 Generating data/50_sparse_directed_1_B.json . . . Done!
-Time taken : 2.643148422241211
+Time taken : 2.8375773429870605
 ---------- 
 
 Generating graph data for:
@@ -405,7 +405,7 @@ Generating graph data for:
   max edge weight  : 5
 Generating data/50_sparse_directed_5_A.json . . . Done!
 Generating data/50_sparse_directed_5_B.json . . . Done!
-Time taken : 2.736995220184326
+Time taken : 2.842336416244507
 ---------- 
 
 Generating graph data for:
@@ -415,7 +415,7 @@ Generating graph data for:
   max edge weight  : 10
 Generating data/50_sparse_directed_10_A.json . . . Done!
 Generating data/50_sparse_directed_10_B.json . . . Done!
-Time taken : 2.6489930152893066
+Time taken : 2.996849298477173
 ---------- 
 
 Generating graph data for:
@@ -425,7 +425,7 @@ Generating graph data for:
   max edge weight  : 1
 Generating data/50_normal_undirected_1_A.json . . . Done!
 Generating data/50_normal_undirected_1_B.json . . . Done!
-Time taken : 1.6725943088531494
+Time taken : 1.797778606414795
 ---------- 
 
 Generating graph data for:
@@ -435,7 +435,7 @@ Generating graph data for:
   max edge weight  : 5
 Generating data/50_normal_undirected_5_A.json . . . Done!
 Generating data/50_normal_undirected_5_B.json . . . Done!
-Time taken : 1.6841726303100586
+Time taken : 1.7546679973602295
 ---------- 
 
 Generating graph data for:
@@ -445,7 +445,7 @@ Generating graph data for:
   max edge weight  : 10
 Generating data/50_normal_undirected_10_A.json . . . Done!
 Generating data/50_normal_undirected_10_B.json . . . Done!
-Time taken : 1.6764659881591797
+Time taken : 1.7579896450042725
 ---------- 
 
 Generating graph data for:
@@ -455,7 +455,7 @@ Generating graph data for:
   max edge weight  : 1
 Generating data/50_normal_directed_1_A.json . . . Done!
 Generating data/50_normal_directed_1_B.json . . . Done!
-Time taken : 2.6598355770111084
+Time taken : 2.7768213748931885
 ---------- 
 
 Generating graph data for:
@@ -465,7 +465,7 @@ Generating graph data for:
   max edge weight  : 5
 Generating data/50_normal_directed_5_A.json . . . Done!
 Generating data/50_normal_directed_5_B.json . . . Done!
-Time taken : 2.653902292251587
+Time taken : 3.0829343795776367
 ---------- 
 
 Generating graph data for:
@@ -475,7 +475,7 @@ Generating graph data for:
   max edge weight  : 10
 Generating data/50_normal_directed_10_A.json . . . Done!
 Generating data/50_normal_directed_10_B.json . . . Done!
-Time taken : 2.72355055809021
+Time taken : 3.1197593212127686
 ---------- 
 
 Generating graph data for:
@@ -485,7 +485,7 @@ Generating graph data for:
   max edge weight  : 1
 Generating data/50_dense_undirected_1_A.json . . . Done!
 Generating data/50_dense_undirected_1_B.json . . . Done!
-Time taken : 1.8349754810333252
+Time taken : 1.9357421398162842
 ---------- 
 
 Generating graph data for:
@@ -495,7 +495,7 @@ Generating graph data for:
   max edge weight  : 5
 Generating data/50_dense_undirected_5_A.json . . . Done!
 Generating data/50_dense_undirected_5_B.json . . . Done!
-Time taken : 1.841322898864746
+Time taken : 2.6538548469543457
 ---------- 
 
 Generating graph data for:
@@ -505,7 +505,7 @@ Generating graph data for:
   max edge weight  : 10
 Generating data/50_dense_undirected_10_A.json . . . Done!
 Generating data/50_dense_undirected_10_B.json . . . Done!
-Time taken : 1.8447997570037842
+Time taken : 2.92876935005188
 ---------- 
 
 Generating graph data for:
@@ -515,7 +515,7 @@ Generating graph data for:
   max edge weight  : 1
 Generating data/50_dense_directed_1_A.json . . . Done!
 Generating data/50_dense_directed_1_B.json . . . Done!
-Time taken : 3.128540515899658
+Time taken : 3.3404974937438965
 ---------- 
 
 Generating graph data for:
@@ -525,7 +525,7 @@ Generating graph data for:
   max edge weight  : 5
 Generating data/50_dense_directed_5_A.json . . . Done!
 Generating data/50_dense_directed_5_B.json . . . Done!
-Time taken : 3.103694438934326
+Time taken : 3.3789474964141846
 ---------- 
 
 Generating graph data for:
@@ -535,5 +535,6 @@ Generating graph data for:
   max edge weight  : 10
 Generating data/50_dense_directed_10_A.json . . . Done!
 Generating data/50_dense_directed_10_B.json . . . Done!
-Time taken : 3.172696113586426
+Time taken : 3.7963004112243652
 ---------- 
+
