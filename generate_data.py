@@ -2,7 +2,9 @@ import os
 import math
 import json
 import random
+import time
 from config import *
+from vertex_quality import compute_vertex_quality
 
 
 def main():
@@ -14,7 +16,11 @@ def main():
         for d in graph_densities:
             for t in graph_types:
                 for w in max_edge_weights:
+                    start = time.time()
                     make_random_graphs(n, d, t, w)
+                    end = time.time()
+                    print("Time taken :", end - start)
+                    print("-" * 10, "\n")
 
 
 def make_random_graphs(v_count, d_type, g_type, m_weight):
@@ -51,14 +57,15 @@ def make_random_graphs(v_count, d_type, g_type, m_weight):
                 "e_list": e_list,
                 "e_matrix": e_matrix
             }
+            q = compute_vertex_quality(g, g_type)
+            g["v_quality"] = q
             data.append(g)
         # Store graph set data in JSON file
         file_path = data_folder + f_title + "_" + set_label + ".json"
-        print("Generating " + file_name + " . . . ", end="")
+        print("Generating " + file_path + " . . . ", end="")
         with open(file_path, 'w') as f:
             f.write(json.dumps(data))
         print("Done!")
-    print("")
 
 
 def num_edges(num_v, density="normal"):
