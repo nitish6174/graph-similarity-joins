@@ -10,11 +10,11 @@ from algo_seqs import sequence_similarity
 sim_methods = [
     "veo",
     "vs",
-    # "seqs",
+    "seqs",
 ]
 
 # Similarity threshold above which pairs are to be found
-sim_threshold = 0.9
+sim_threshold = 1.0
 
 # Verbose parameter for showing similarity score while execution
 verbose = 0
@@ -48,8 +48,6 @@ def pairwise_similarity(set1, set2, g_type):
     for i in range(len(set1)):
         result[i] = {}
         for j in range(len(set2)):
-            if verbose:
-                print("Evaluating pair", i, "and", j)
             result[i][j] = {}
             if "veo" in sim_methods:
                 a = time.time()
@@ -58,7 +56,7 @@ def pairwise_similarity(set1, set2, g_type):
                 t_sim_veo = b - a
                 result[i][j]["veo"] = sim_veo
                 result[i][j]["veo_time"] = t_sim_veo
-                if verbose and sim_veo > sim_threshold:
+                if verbose and sim_veo >= sim_threshold:
                     print("  veo :", sim_veo)
             if "vs" in sim_methods:
                 a = time.time()
@@ -67,7 +65,7 @@ def pairwise_similarity(set1, set2, g_type):
                 t_sim_vs = b - a
                 result[i][j]["vs"] = sim_vs
                 result[i][j]["vs_time"] = t_sim_vs
-                if verbose and sim_vs > sim_threshold:
+                if verbose and sim_vs >= sim_threshold:
                     print("  vs :", sim_vs)
             if "seqs" in sim_methods:
                 a = time.time()
@@ -76,9 +74,9 @@ def pairwise_similarity(set1, set2, g_type):
                 t_sim_seqs = b - a
                 result[i][j]["seqs"] = sim_seqs
                 result[i][j]["seqs_time"] = t_sim_seqs
-                if verbose and sim_seqs > sim_threshold:
+                if verbose and sim_seqs >= sim_threshold:
+                    print("A", i, "and B", j, ":")
                     print("  seqs :", sim_seqs)
-            s = "A" + str(i+1) + " and B" + str(j+1) + " :"
     return result
 
 
@@ -104,6 +102,7 @@ def save_results(results, n, d, t, w):
 
 
 def generate_vertex_index_list(g, v_count):
+    """Array which maps vertex label to matrix index"""
     l = [-1] * v_count
     index = 0
     for v in g["vertices"]:

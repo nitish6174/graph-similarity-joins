@@ -2,7 +2,7 @@ from vertex_quality import compute_vertex_quality
 
 
 def vertex_edge_vector_similarity(g1, g2, g_type):
-    # Compute out-degree and quality of vertices
+    # Compute out-degree of vertices
     od1 = compute_vertex_quality(g1, g_type, "out_degree")
     od2 = compute_vertex_quality(g2, g_type, "out_degree")
     # Compute edge weightage
