@@ -2,9 +2,9 @@ import os
 import json
 import time
 from config import *
-from algo_veo import vertex_edge_overlap
-from algo_vs import vertex_edge_vector_similarity
-from algo_seqs import sequence_similarity
+from algo.algo_veo import vertex_edge_overlap
+from algo.algo_vs import vertex_edge_vector_similarity
+from algo.algo_seqs import sequence_similarity
 
 # Methods to run
 sim_methods = [
@@ -48,14 +48,14 @@ def pairwise_similarity(set1, set2, g_type):
     for i in range(len(set1)):
         result[i] = {}
         for j in range(len(set2)):
-            result[i][j] = {}
+            result[i][j] = {"method": {}, "time": {}}
             if "veo" in sim_methods:
                 a = time.time()
                 sim_veo = vertex_edge_overlap(set1[i], set2[j], g_type)
                 b = time.time()
                 t_sim_veo = b - a
-                result[i][j]["veo"] = sim_veo
-                result[i][j]["veo_time"] = t_sim_veo
+                result[i][j]["method"]["veo"] = sim_veo
+                result[i][j]["time"]["veo"] = t_sim_veo
                 if verbose and sim_veo >= sim_threshold:
                     print("  veo :", sim_veo)
             if "vs" in sim_methods:
@@ -63,8 +63,8 @@ def pairwise_similarity(set1, set2, g_type):
                 sim_vs = vertex_edge_vector_similarity(set1[i], set2[j], g_type)
                 b = time.time()
                 t_sim_vs = b - a
-                result[i][j]["vs"] = sim_vs
-                result[i][j]["vs_time"] = t_sim_vs
+                result[i][j]["method"]["vs"] = sim_vs
+                result[i][j]["time"]["vs"] = t_sim_vs
                 if verbose and sim_vs >= sim_threshold:
                     print("  vs :", sim_vs)
             if "seqs" in sim_methods:
@@ -72,8 +72,8 @@ def pairwise_similarity(set1, set2, g_type):
                 sim_seqs = sequence_similarity(set1[i], set2[j], g_type)
                 b = time.time()
                 t_sim_seqs = b - a
-                result[i][j]["seqs"] = sim_seqs
-                result[i][j]["seqs_time"] = t_sim_seqs
+                result[i][j]["method"]["seqs"] = sim_seqs
+                result[i][j]["time"]["seqs"] = t_sim_seqs
                 if verbose and sim_seqs >= sim_threshold:
                     print("A", i, "and B", j, ":")
                     print("  seqs :", sim_seqs)

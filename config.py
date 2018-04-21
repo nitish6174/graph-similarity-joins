@@ -1,11 +1,12 @@
 # Folders
 data_folder = "data/"
 result_folder = "results/"
+analysis_folder = "analysis/"
 
 # Graph parameters for which datset is generated
 # Max vertex label in any graph of a set
 v_counts = [10, 25, 50]
-graph_densities = ["dense"]
+graph_densities = ["sparse", "normal", "dense"]
 graph_types = ["undirected", "directed"]
 max_edge_weights = [1, 5, 10]
 

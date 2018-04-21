@@ -4,7 +4,7 @@ import json
 import random
 import time
 from config import *
-from vertex_quality import compute_vertex_quality
+from algo.vertex_quality import compute_vertex_quality
 
 
 def main():
