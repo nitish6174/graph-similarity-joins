@@ -1,13 +1,13 @@
 from vertex_quality import compute_vertex_quality
 
 
-def vertex_edge_vector_similarity(g1, g2):
-    # Compute quality of vertices
-    vq1 = compute_vertex_quality(g1, "degree_normalised")
-    vq2 = compute_vertex_quality(g2, "degree_normalised")
+def vertex_edge_vector_similarity(g1, g2, g_type):
+    # Compute out-degree and quality of vertices
+    od1 = compute_vertex_quality(g1, g_type, "out_degree")
+    od2 = compute_vertex_quality(g2, g_type, "out_degree")
     # Compute edge weightage
-    eq1 = compute_edge_weightage(g1, vq1)
-    eq2 = compute_edge_weightage(g2, vq2)
+    eq1 = compute_edge_weightage(g1, od1)
+    eq2 = compute_edge_weightage(g2, od2)
     # Loop through all edges of g1, compare its weightage
     # with corresponding edge in g2 and add penalty
     penalty = 0.0
@@ -27,12 +27,11 @@ def vertex_edge_vector_similarity(g1, g2):
                 num_edges_union += 1
                 penalty += 1
     # Similarity is given by 1 - (penalty / no. of edges in union of graphs)
-    return 1.0 - penalty / num_edges_union
+    sim_val = 1.0 - penalty / num_edges_union
+    return sim_val
 
 
-def compute_edge_weightage(g, vq):
-    # Find degree of all vertices
-    vertex_degree = compute_vertex_quality(g, "degree")
+def compute_edge_weightage(g, out_degree):
     # Use double dictionary to store edge quality
     # Thus q(u,v) can be accessed by eq[u][v]
     eq = {}
@@ -40,7 +39,11 @@ def compute_edge_weightage(g, vq):
     n = len(v_set)
     for i in range(n):
         u = v_set[i]
+        q_u = g["v_quality"][str(u)]
         eq[u] = {}
-        for j in range(i+1, n):
-            eq[u][v_set[j]] = vq[u] * 1.0 / vertex_degree[u]
+        for j in range(n):
+            w = g["e_matrix"][i][j]
+            if w != 0:
+                v = v_set[j]
+                eq[u][v] = q_u * w / out_degree[u]
     return eq
