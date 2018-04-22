@@ -1,4 +1,4 @@
-from vertex_quality import compute_vertex_quality
+from algo.vertex_quality import compute_vertex_quality
 
 
 def vertex_edge_vector_similarity(g1, g2, g_type):

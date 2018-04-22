@@ -1,6 +1,6 @@
 from operator import itemgetter
 from config import *
-from vertex_quality import compute_vertex_quality
+from algo.vertex_quality import compute_vertex_quality
 
 
 def sequence_similarity(g1, g2, g_type):
@@ -22,6 +22,8 @@ def sequence_similarity(g1, g2, g_type):
 
 
 def graph_to_node_sequence(g):
+    if "node_seq" in g:
+        return g["node_seq"]
     n = len(g["vertices"])
     # Maintain a quality dictionary
     q = {k:g["v_quality"][k] for k in g["v_quality"]}
@@ -43,7 +45,8 @@ def graph_to_node_sequence(g):
         q[str(v)] = -1
         # Recursively visit & add highest quality neighbour of current vertex
         recurse_add_neighbour(g, node_seq, q, v)
-    return node_seq
+    g["node_seq"] = node_seq
+    return g["node_seq"]
 
 
 def recurse_add_neighbour(g, node_seq, q, v):
