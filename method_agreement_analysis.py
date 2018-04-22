@@ -10,6 +10,8 @@ def main():
     # Make analysis directory
     if not os.path.exists(analysis_folder):
         os.mkdir(analysis_folder)
+    if not os.path.exists(method_comparison_plots_folder):
+        os.mkdir(method_comparison_plots_folder)
     method_sim_values = []
     # Loop through parameters and load corresponding result file
     for n in v_counts:
@@ -73,7 +75,7 @@ def compute_method_similarity(a):
 
 
 def save_analysis(results):
-    file = analysis_folder + "method_comparison.json"
+    file = analysis_folder + "method_agreement_analysis.json"
     print("Saving : " + file, end=" . . . ")
     with open(file, 'w') as f:
         f.write(json.dumps(results))
@@ -93,9 +95,9 @@ def scatterplot(n, d, t, w, a):
         ax.plot([i-width/2., i+width/2.],[mean,mean], color="k")
     ax.set_xticks(range(len(labels)))
     ax.set_xticklabels(labels)
-    f_title = str(n) + "_" + d + "_" + t + "_" + str(w)
-    file_path = analysis_folder + "scatter_" + f_title + ".png"
-    plt.savefig(file_path)
+    f_name = str(n) + "_" + d + "_" + t + "_" + str(w) + ".png"
+    file_path = method_comparison_plots_folder + f_name
+    plt.savefig(file_path, bbox_inches='tight')
 
 
 if __name__ == '__main__':

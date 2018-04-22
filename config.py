@@ -2,6 +2,8 @@
 data_folder = "data/"
 result_folder = "results/"
 analysis_folder = "analysis/"
+method_comparison_plots_folder = "analysis/method_comparison_plots/"
+param_analysis_plots_folder = "analysis/param_analysis_plots/"
 
 # Graph parameters for which datset is generated
 # Max vertex label in any graph of a set
