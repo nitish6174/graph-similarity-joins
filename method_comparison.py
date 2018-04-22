@@ -1,6 +1,8 @@
 import os
 import json
 from scipy import spatial
+import numpy as np
+import matplotlib.pyplot as plt
 from config import *
 
 
@@ -8,7 +10,7 @@ def main():
     # Make analysis directory
     if not os.path.exists(analysis_folder):
         os.mkdir(analysis_folder)
-    method_sim_analysis = []
+    method_sim_values = []
     # Loop through parameters and load corresponding result file
     for n in v_counts:
         for d in graph_densities:
@@ -22,15 +24,16 @@ def main():
                     res = load_sim_results(n, d, t, w)
                     a = make_arrays(res)
                     method_sim = compute_method_similarity(a)
-                    method_sim_analysis.append({
+                    method_sim_values.append({
                         "v_count": n,
                         "density": d,
                         "g_type": t,
                         "max_weight": w,
                         "method_similarity": method_sim
                     })
+                    scatterplot(n, d, t, w, a)
     # Save analysis results
-    save_analysis(method_sim_analysis)
+    # save_analysis(method_sim_values)
 
 
 def load_sim_results(n, d, t, w):
@@ -75,6 +78,24 @@ def save_analysis(results):
     with open(file, 'w') as f:
         f.write(json.dumps(results))
     print("Done !\n")
+
+
+def scatterplot(n, d, t, w, a):
+    labels = [k for k in a]
+    colors = ["crimson", "purple", "green", "red", "blue"]
+    data = np.array([a[x] for x in labels])
+    width = 0.4
+    fig, ax = plt.subplots()
+    for i, l in enumerate(labels):
+        x = np.ones(data.shape[1])*i + (np.random.rand(data.shape[1])*width-width/2.)
+        ax.scatter(x, data[i,:], color=colors[i], s=1)
+        mean = data[i,:].mean()
+        ax.plot([i-width/2., i+width/2.],[mean,mean], color="k")
+    ax.set_xticks(range(len(labels)))
+    ax.set_xticklabels(labels)
+    f_title = str(n) + "_" + d + "_" + t + "_" + str(w)
+    file_path = analysis_folder + "scatter_" + f_title + ".png"
+    plt.savefig(file_path)
 
 
 if __name__ == '__main__':
